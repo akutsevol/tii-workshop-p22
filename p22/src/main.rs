@@ -1,6 +1,6 @@
-mod song;
-use crate::song::twelve_days_of_christmas;
+mod figures;
+use crate::figures::figures;
 
 fn main() {
-    twelve_days_of_christmas(12);
+    figures();
 }
