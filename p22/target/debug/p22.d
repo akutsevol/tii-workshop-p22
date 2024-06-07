@@ -1,1 +1,0 @@
-/Users/aliakseikutsevol/Temp/rust/tii-workshop-p22/p22/target/debug/p22: /Users/aliakseikutsevol/Temp/rust/tii-workshop-p22/p22/src/calc.rs /Users/aliakseikutsevol/Temp/rust/tii-workshop-p22/p22/src/main.rs
