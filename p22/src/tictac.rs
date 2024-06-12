@@ -43,8 +43,7 @@ impl TicTacField {
     pub fn analyze(&self) -> Result<GameState, TicTacError> {
         // Check rows
         for row in 0..3 {
-            if self.board[row][0] == self.board[row][1]
-                && self.board[row][1] == self.board[row][2]
+            if self.board[row][0] == self.board[row][1] && self.board[row][1] == self.board[row][2]
             {
                 if let Some(player) = self.board[row][0] {
                     return Ok(GameState::Win(player));
@@ -54,8 +53,7 @@ impl TicTacField {
 
         // Check columns
         for col in 0..3 {
-            if self.board[0][col] == self.board[1][col]
-                && self.board[1][col] == self.board[2][col]
+            if self.board[0][col] == self.board[1][col] && self.board[1][col] == self.board[2][col]
             {
                 if let Some(player) = self.board[0][col] {
                     return Ok(GameState::Win(player));
@@ -114,8 +112,14 @@ mod tests {
     fn test_make_move() {
         let mut field = TicTacField::new();
         assert_eq!(field.make_move(0, 0, Player::X), Ok(()));
-        assert_eq!(field.make_move(0, 0, Player::Y), Err(TicTacError::InvalidMove));
-        assert_eq!(field.make_move(3, 0, Player::X), Err(TicTacError::OutOfBounds));
+        assert_eq!(
+            field.make_move(0, 0, Player::Y),
+            Err(TicTacError::InvalidMove)
+        );
+        assert_eq!(
+            field.make_move(3, 0, Player::X),
+            Err(TicTacError::OutOfBounds)
+        );
     }
 
     #[test]

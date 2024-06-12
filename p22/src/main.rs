@@ -1,6 +1,6 @@
 mod tictac;
 
-use crate::tictac::{Player,TicTacField};
+use crate::tictac::{Player, TicTacField};
 
 fn main() {
     let mut field = TicTacField::new();
