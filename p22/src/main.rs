@@ -13,8 +13,8 @@ fn main() {
         p1: (Point {x: 15, y: 15}),
         p2: (Point {x: 25, y: 25})
     };
-    p.print();
-    c.print();
-    t.print();
-    rc.print();
+    println!("{}: {}", p.name(), p.gen_string());
+    println!("{}: {}", c.name(), c.gen_string());
+    println!("{}: {}", t.name(), t.gen_string());
+    println!("{}: {}", rc.name(), rc.gen_string());
 }
