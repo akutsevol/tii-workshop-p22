@@ -21,14 +21,15 @@ pub fn twelve_days_of_christmas(mut n: usize) {
         "Twelve drummers drumming"
     ];
 
-    for i in 0..n {
-        println!("On the {} day of Christmas, my true love gave to me:", days[i]);
-        for j in (0..=i).rev() {
+    for (i, day) in days.iter().enumerate().take(n) {
+        println!("On the {} day of Christmas, my true love gave to me:", day);
+        for (j, gift) in gifts.iter().enumerate().take(i + 1).rev() {
             if j == 0 && i != 0 {
                 print!("And ");
             }
-            println!("{}", gifts[j]);
+            println!("{}", gift);
         }
         println!();
     }
+
 }
